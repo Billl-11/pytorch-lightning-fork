@@ -34,7 +34,7 @@ __all__ = [
     "__author__",
     "__author_email__",
     "__copyright__",
-    "__modifed__",
+    "__modified__ ",
     "__docs__",
     "__docs_url__",
     "__homepage__",
