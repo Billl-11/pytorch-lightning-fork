@@ -89,6 +89,9 @@ def _load_from_checkpoint(
         return _load_state(cls, checkpoint, **kwargs)
     if issubclass(cls, pl.LightningModule):
         model = _load_state(cls, checkpoint, strict=strict, **kwargs)
+        model.loss._device = "cpu"
+        for metric in model.loggging_metrics:
+            metric._device = "cpu"
         state_dict = checkpoint["state_dict"]
         if not state_dict:
             rank_zero_warn(f"The state dict in {checkpoint_path!r} contains no parameters.")
