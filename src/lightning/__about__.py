@@ -15,7 +15,6 @@
 import time
 
 __author__ = "Lightning AI et al."
-__modified__ = "Github username: Billl-11"
 __author_email__ = "pytorch@lightning.ai"
 __license__ = "Apache-2.0"
 __copyright__ = f"Copyright (c) 2018-{time.strftime('%Y')}, {__author__}."
@@ -34,7 +33,6 @@ __all__ = [
     "__author__",
     "__author_email__",
     "__copyright__",
-    "__modified__ ",
     "__docs__",
     "__docs_url__",
     "__homepage__",
