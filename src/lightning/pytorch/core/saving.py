@@ -90,7 +90,7 @@ def _load_from_checkpoint(
     if issubclass(cls, pl.LightningModule):
         model = _load_state(cls, checkpoint, strict=strict, **kwargs)
         model.loss._device = "cpu"
-        for metric in model.loggging_metrics:
+        for metric in model.logging_metrics:
             metric._device = "cpu"
         state_dict = checkpoint["state_dict"]
         if not state_dict:
